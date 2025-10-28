@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Chat — Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3zm0 2.236L6 8v8l6 3.236L18 16V8l-6-2.764z"></path>
+      </svg>
+      <h1>Cloud Chat</h1>
+    </div>
+    <div id="userPanel" class="user-panel hidden">
+      <span id="userName"></span>
+      <button id="logoutBtn" class="btn btn-secondary">Salir</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Auth Card -->
+    <section id="authCard" class="card">
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Ingresar</button>
+        <button class="tab" data-tab="register">Registrarme</button>
+      </div>
+
+      <div id="login" class="tab-content active">
+        <form id="loginForm" class="form-grid">
+          <label>
+            <span>Correo</span>
+            <input type="email" id="loginEmail" required placeholder="tu@correo.com" />
+          </label>
+          <label>
+            <span>Contraseña</span>
+            <input type="password" id="loginPass" required minlength="6" />
+          </label>
+          <button class="btn" type="submit">Ingresar</button>
+        </form>
+      </div>
+
+      <div id="register" class="tab-content">
+        <form id="registerForm" class="form-grid">
+          <label>
+            <span>Nombre a mostrar</span>
+            <input type="text" id="regName" placeholder="Ej: JJ Zapata" />
+          </label>
+          <label>
+            <span>Correo</span>
+            <input type="email" id="regEmail" required placeholder="tu@correo.com" />
+          </label>
+          <label>
+            <span>Contraseña (mín. 6)</span>
+            <input type="password" id="regPass" required minlength="6" />
+          </label>
+          <button class="btn" type="submit">Crear cuenta</button>
+        </form>
+      </div>
+      <p id="authError" class="error"></p>
+    </section>
+
+    <!-- Chat Card -->
+    <section id="chatCard" class="card hidden">
+      <div class="chat-header">
+        <h2>#general</h2>
+        <small>Mensajes en tiempo real</small>
+      </div>
+
+      <ul id="messages" class="messages"></ul>
+
+      <form id="messageForm" class="message-form">
+        <input id="messageInput" type="text" placeholder="Escribe un mensaje..." autocomplete="off" maxlength="1000" />
+        <button class="btn" type="submit" title="Enviar">Enviar</button>
+      </form>
+      <p id="msgError" class="error"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Hecho con ❤️ usando Firebase + GitHub Pages. Código de muestra educativo.
+    </p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
