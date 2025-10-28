@@ -17,12 +17,13 @@ import {
 
 // === Pega aquí tu configuración de Firebase ===
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_AUTH_DOMAIN",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_STORAGE_BUCKET",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID"
+  apiKey: "AIzaSyDCT5wLUIn2dclMnEsjKKN0mTKJR3jiMKo",
+  authDomain: "chatuan-7f6ca.firebaseapp.com",
+  projectId: "chatuan-7f6ca",
+  storageBucket: "chatuan-7f6ca.firebasestorage.app",
+  messagingSenderId: "247139724411",
+  appId: "1:247139724411:web:a0113eab8698427dd886de",
+  measurementId: "G-QD2RNTELFS"
 };
 
 // Inicializa Firebase
